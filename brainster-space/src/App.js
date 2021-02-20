@@ -1,5 +1,6 @@
 
 import './App.css';
+import Popper from 'popper.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';

@@ -1,6 +1,7 @@
 import React from 'react';
+import { IoArrowForward } from 'react-icons/io5'
 
-const JoinForm = (props) => {
+const JoinForm = ({handleSubmit}) => {
     return (
         <form onSubmit={handleSubmit}>
         <h1>Приклучи се</h1>

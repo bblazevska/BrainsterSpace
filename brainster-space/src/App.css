@@ -2,6 +2,25 @@
 html {
     scroll-behavior: smooth;
 }
+span {
+    display: inline-block;
+  }
+.main-page {
+  margin: 0 100px 0 100px;
+}
+.Navbar {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-button {
+  display: none;
+}
+
+.Navbar label,
+#hamburger {
+  display: none;
+}
 
 .button-black{
     background-color: black;
@@ -10,13 +29,53 @@ html {
     border-radius: 6px;
     padding: 5px;
 }
-
+.button-black:hover {
+    background-color: rgba(0, 0, 0, 0.767);
+    transition: background-color 0.5s;
+    text-decoration: none;
+  }
+.button-yellow {
+    background-color: #fcd232;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px 7px 7px 5px;
+    box-shadow: 17px 31px 65px -1px rgba(158, 158, 158, 0.75);
+    -webkit-box-shadow: 17px 31px 65px -1px rgba(158, 158, 158, 0.75);
+    -moz-box-shadow: 17px 31px 65px -1px rgba(158, 158, 158, 0.75);
+    transition: background-color 0.5s;
+}
+  
+.button-yellow:hover {
+    background-color: #c2a327;
+    transition: background-color 0.5s;
+}
+.pill {
+    display: inline-block;
+    background-color: #fcd232;
+    border-radius: 17px;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 7px 13px;
+    margin-bottom: 10px;
+  }
+  .text-linetrough {
+    text-decoration: line-through !important;
+  }
+  .btn-linetrough:hover {
+    background-color: black;
+  }
+  .par {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 .Banner {
     background-image: url('./assets/images/banner-background-img.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,8 +86,128 @@ html {
 
 .Banner h1{
     color: white;
+    font-size: 60px;
     margin: 0;
     text-align: center;
     position: relative;
     z-index: 101;
 }
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.card-lift:hover {
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  .card-lift {
+      transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+  }
+  .card-link {
+    color: black;
+  }
+  .card-link:hover {
+    text-decoration: none;
+    color: black;
+  }
+.nav-link:hover {
+    text-decoration: none;
+}
+.text-bold {
+  font-weight: bold !important;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+ul{
+  list-style-type: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding-left: 0;
+  margin: 5px;
+}
+.margin-b{
+  margin-bottom: 5rem;
+}
+.img-right {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.icon {
+    font-size: 2rem;
+    margin: 5px 15px 0 0;
+  }
+  .facebook {
+    color: #3c5a99;
+  }
+  .linkedin {
+    color: #0172b1;
+    border-radius: 50%;
+  }
+  .instagram {
+    color: #f82f72;
+  }
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-position: center;
+  }
+  .red {
+    background-color: rgba(145, 7, 7, 0.623);
+  }
+  .green {
+    background-color: rgba(3, 88, 21, 0.623);
+  }
+  .purple {
+    background-color: rgba(101, 5, 114, 0.623);
+  }
+  .blue {
+    background-color: rgba(33, 22, 131, 0.623);
+  }
+  .teal {
+    background-color: rgba(2, 97, 57, 0.623);
+  }
+  .iconSize {
+    font-size: 20px;
+  }
+  .scale {
+    transition: transform 0.2s;
+  }
+  .scale:hover {
+    transform: scale(1.07);
+  }
+  .BottomBanner {
+    margin: 100px 0;
+  }
+  .BottomBanner h1 {
+    font-size: 3.5rem;
+  }
+  .BottomBanner p {
+    font-size: 2rem;
+  }
+  .event-space-card-img{
+    height: 250px;
+    width: 350px;
+  }
+  .Footer {
+    width: 100%;
+    border-top: 2px solid #c4c4c4;
+    background-color: #f5f5f5;
+  }
+  .bottom-section {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: #e7e7e7;
+    padding-top: 1.3rem;
+  }
