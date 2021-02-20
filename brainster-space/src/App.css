@@ -1,1 +1,34 @@
 
+html {
+    scroll-behavior: smooth;
+}
+
+.button-black{
+    background-color: black;
+    color: #fcd232;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.Banner {
+    background-image: url('./assets/images/banner-background-img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Banner h1{
+    color: white;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 101;
+}
