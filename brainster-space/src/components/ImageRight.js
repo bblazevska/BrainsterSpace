@@ -10,7 +10,7 @@ const ImageRight = ({title, content, img, children}) => {
                     {children}
                 </div>
                 <div className="col-lg-7 col-md-12 col-sm-12 col-12">
-                    <img /*src={require(`../assets/images/${img}.jpg`).default}*/ src={img} alt="" className="img-right"/>
+                    <img src={require(`../assets/images/${img}.jpg`)} alt="" className="img-right"/>
                 </div>
             </div>
         </div>

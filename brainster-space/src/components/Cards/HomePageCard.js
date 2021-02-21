@@ -5,11 +5,12 @@ import { Link as LinkScroll } from 'react-scroll'
 import { IoArrowForwardCircleOutline } from 'react-icons/io5'
 
 const HomePageCard = ({title, content, a, img, link, onClick}) => {
+    console.log(require(`../../assets/images/${img}.jpg`).default)
     return (
                 <div className="col-lg-4 col-md-6 col-sm-12 col-12 d-flex">
                     {a === true ? (<a href={link} target="_blank" className="card-link">
                         <Card className="mb-4 card-lift">
-                            <Card.Img variant="top" /*src={require(`../../assets/images/${img}.jpg`).default}*/ src={img} style={{height: '350px'}} />
+                            <Card.Img variant="top" src={require(`../../assets/images/${img}.jpg`)}  style={{height: '350px'}} />
                             <Card.Body>
                                  <Card.Title className="text-bold">{title}</Card.Title>
                                  <Card.Text>{content}</Card.Text>
@@ -19,7 +20,7 @@ const HomePageCard = ({title, content, a, img, link, onClick}) => {
                     </a>) : link === '#coworking' ? (
                         <LinkScroll to={link} spy={true} smooth={true}>
                             <Card className="mb-4 card-lift">
-                            <Card.Img variant="top" /*src={require(`../../assets/images/${img}.jpg`).default}*/ src={img} style={{height: '350px'}} />
+                            <Card.Img variant="top" src={require(`../../assets/images/${img}.jpg`)}  style={{height: '350px'}} />
                             <Card.Body>
                                  <Card.Title className="text-bold">{title}</Card.Title>
                                  <Card.Text>{content}</Card.Text>
@@ -29,7 +30,7 @@ const HomePageCard = ({title, content, a, img, link, onClick}) => {
                         </LinkScroll>
                     ) : (<Link to={link} className="card-link" onClick={onClick}>
                         <Card className="mb-4 card-lift">
-                            <Card.Img variant="top" /*src={require(`../../assets/images/${img}.jpg`).default}*/ src={img} style={{height: '350px'}} />
+                            <Card.Img variant="top" src={require(`../../assets/images/${img}.jpg`)}  style={{height: '350px'}} />
                             <Card.Body>
                                  <Card.Title className="text-bold">{title}</Card.Title>
                                  <Card.Text>{content}</Card.Text>
@@ -42,4 +43,4 @@ const HomePageCard = ({title, content, a, img, link, onClick}) => {
     )
 }
 
-export default Card;
+export default HomePageCard;

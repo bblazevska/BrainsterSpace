@@ -23,7 +23,7 @@ class App extends PureComponent {
         <NavBar />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/akademies" component={AcademiesPage}/>
+          <Route path="/academies" component={AcademiesPage}/>
           <Route path="/events" component={EventsPage} />
           <Route path="/events_space" component={EventSpacePage} />
         </Switch>

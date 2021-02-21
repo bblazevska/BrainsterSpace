@@ -1,10 +1,29 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 span {
     display: inline-block;
   }
+
+.div-offers{
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  font-size: 2.2rem;
+  border-radius: 6px;
+  padding: 10px 25px;
+  margin: 10px;
+}
+
+.icon-yellow{
+  color: #fcd232;
+  align-self: center;
+  font-size: 2.5rem;
+}
+
 .main-page {
   margin: 0 100px 0 100px;
 }
@@ -17,10 +36,6 @@ span {
   display: none;
 }
 
-.Navbar label,
-#hamburger {
-  display: none;
-}
 
 .button-black{
     background-color: black;
@@ -66,9 +81,10 @@ span {
     background-color: black;
   }
   .par {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+
   }
 .Banner {
     background-image: url('./assets/images/banner-background-img.jpg');
@@ -96,21 +112,45 @@ label {
   font-size: 14px;
   font-weight: 600;
 }
+.academy-card{
+  border: 0.5px solid transparent ;
+  border-radius: 10px;
+}
 .card-lift:hover {
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
-  .card-lift {
+}
+.card-transition{
+  transform: translate(0px, calc(53px));
+transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 0s;
+}
+.card-lift {
       transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
-  }
-  .card-link {
+}
+.card-link {
     color: black;
-  }
-  .card-link:hover {
+}
+.card-link:hover {
     text-decoration: none;
     color: black;
-  }
+}
+.card-line::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #fcd232;
+  transition: width 0.5s;
+}
+.card-line:hover::after {
+  width: 100%;
+  transition: width 0.5s;
+}
 .nav-link:hover {
     text-decoration: none;
 }
@@ -123,10 +163,22 @@ label {
 }
 ul{
   list-style-type: none;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   padding-left: 0;
   margin: 5px;
+}
+.c-black{
+  color: #212529;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+.c-black:hover{
+  color: #212529;
+  margin-bottom: 6px;
+}
+li{
+  margin-bottom: 6px;
 }
 .margin-b{
   margin-bottom: 5rem;
@@ -136,9 +188,19 @@ ul{
   height: 100%;
   border-radius: 5px;
 }
-
+.img-left {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.c-white{
+  color: white;
+}
+.col-black{
+  color: black;
+}
 .icon {
-    font-size: 2rem;
+    font-size: 2.7rem;
     margin: 5px 15px 0 0;
   }
   .facebook {
@@ -200,14 +262,25 @@ ul{
     width: 350px;
   }
   .Footer {
+    position: relative;
     width: 100%;
+    height: 500px;
     border-top: 2px solid #c4c4c4;
     background-color: #f5f5f5;
   }
   .bottom-section {
+    position: absolute;
+    bottom: 0;
+    
     width: 100%;
-    height: 60px;
+    height: 50px;
     text-align: center;
-    background-color: #e7e7e7;
+    background-color: #ffffff;
     padding-top: 1.3rem;
+  }
+
+  .font-s-1{
+    font-size: 1.5rem;
+    margin: 7px;
+    padding: 4px;
   }
