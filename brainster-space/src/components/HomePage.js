@@ -7,7 +7,7 @@ import JoinForm from './Forms/JoinForm';
 import ImageRight from './ImageRight';
 import { BiCalendar } from 'react-icons/bi'
 
-import Modal from "./Modal";
+import ModalClass from "./ModalClass";
 import { Element } from 'react-scroll';
 
 import ImageLeft from './ImageLeft';
@@ -19,13 +19,9 @@ class HomePage extends Component {
         super(props);
         this.state = {
             isOpen: false,
-            title: 'Компании',
-            img: 'banner-background-img',
-            content: 'Компаниите имаат можност да ги надоградат своите тимови, а со тоа да го подобрат перформансот на својата компанија.'+
-
-            'Дигиталната трансформација се случува, а вашите компании треба да бидат подготвени за да се адаптираат соодветно. Обуки, семинари, курсеви или team building?'+
-            
-            'Во Brainster Space имаме специјално обучен тим кој е подготвен да ја насочи, адаптира и сподели својата експертиза со денешните потреби на компаниите.'
+            title:"Едукација",
+            img:"edukacija1",
+            content: "Дали си подготвен да одговориш на потребите на иднината? Вистинските курсеви,академии и семинари кои ќе ти овозможат кариерна трансформација во областа дигитален маркетинг, дизајн, програмирање и Data Science."
         };
     }
 
@@ -38,13 +34,19 @@ class HomePage extends Component {
     setAcademiesProps = () => {
         this.setState({
             title:"Едукација",
-            img:"edukacija1"
+            img:"edukacija1",
+            content: "Дали си подготвен да одговориш на потребите на иднината? Вистинските курсеви,академии и семинари кои ќе ти овозможат кариерна трансформација во областа дигитален маркетинг, дизајн, програмирање и Data Science."
         })
     }
     setCompaniesProps = () => {
         this.setState({
             title:"Компании",
-            img:"banner-background-img"
+            img:"banner-background-img",
+            content: 'Компаниите имаат можност да ги надоградат своите тимови, а со тоа да го подобрат перформансот на својата компанија.'+
+
+            'Дигиталната трансформација се случува, а вашите компании треба да бидат подготвени за да се адаптираат соодветно. Обуки, семинари, курсеви или team building?'+
+            
+            'Во Brainster Space имаме специјално обучен тим кој е подготвен да ја насочи, адаптира и сподели својата експертиза со денешните потреби на компаниите.'
         })
     }
 
@@ -73,9 +75,9 @@ class HomePage extends Component {
                         <HomePageCard img="coworking" title="Coworking"  link="#coworking" content="Биди дел од tech заедницата на иноватори, креативци и претприемачи. Резервирај стол во нашата shered office. Пичирај го твојот бизнис и нашиот тим заедно ќе одлучи секој месец со кого да ги дели своите канцеларии."/>
                         <HomePageCard img="prostor_za_nastani" title="Простор за настани"  link="prostor_za_nastani" content="Имаш идеја за обука или настан од tech областа? Ние имаме простор за реализација. Нашиот тим внимателно ги одбира и курира сите настани." />
                         <HomePageCard img="partnerstva-so-tech-komp" title="Партнерства со Tech компании " onClick={this.openModal} content="Целта и идејата е креирање на tech заедница која ќе се негува,расте и креира подобро утро за сите нас. Преку директно и индиректно поврзување на tech талентите со компаниите." />
-                            {this.state.isOpen ? <Modal isOpen={this.state.isOpen} handleSubmit={this.state.handleSubmit}> <JoinForm /></Modal> : null}
+                            {this.state.isOpen ? <ModalClass isOpen={this.state.isOpen} handleSubmit={this.state.handleSubmit} handleClose={this.closeModal}> <JoinForm /></ModalClass> : null}
                         <HomePageCard img="edukacija2" title="Иновации за компании" onClick={this.openModal} content="Нов концепт кој ќе им помогне на компаниите од стариот во новиот начин на работење. Подгответе ја вашата компанија за дигитална трансформација." />
-                        {this.state.isOpen ? <Modal isOpen={this.state.isOpen} handleSubmit={this.state.handleSubmit}> <InovationsForm/> </Modal> : null}
+                        {this.state.isOpen ? <ModalClass isOpen={this.state.isOpen} handleSubmit={this.state.handleSubmit} handleClose={this.closeModal}> <InovationsForm/> </ModalClass> : null}
                     </div>
                 </CardsContainer>
 

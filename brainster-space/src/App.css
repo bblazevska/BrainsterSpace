@@ -35,6 +35,10 @@ span {
 .nav-button {
   display: none;
 }
+.Navbar label,
+#hamburger {
+  display: none;
+}
 
 
 .button-black{
@@ -100,6 +104,7 @@ span {
     margin-bottom: 20px;
 }
 
+
 .Banner h1{
     color: white;
     font-size: 60px;
@@ -151,7 +156,7 @@ transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   width: 100%;
   transition: width 0.5s;
 }
-.nav-link:hover {
+.navlink:hover {
     text-decoration: none;
 }
 .text-bold {
@@ -283,4 +288,143 @@ li{
     font-size: 1.5rem;
     margin: 7px;
     padding: 4px;
+  }
+  @media screen and (max-width: 768px) {
+    .card-line::after {
+      display: none;
+    }
+    .card-line:hover::after {
+      display: none;
+    }
+    .main {
+      margin-top: 200px;
+    }
+    .Navbar label {
+      text-align: end;
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      color: #fcd232;
+      background-color: black;
+      border-radius: 5px;
+      padding: 9px;
+  
+      padding-bottom: 8px;
+    }
+    .Navbar .main-button {
+      margin-right: 25px;
+      margin-left: 5px;
+    }
+    .nav-button {
+      display: none;
+      box-shadow: none;
+    }
+    
+    .navitems {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 200;
+      width: 100%;
+      background-color: black;
+    }
+    .navitems .navlink {
+      box-sizing: border-box;
+      display: inline-block;
+      color: white;
+      text-align: left;
+      width: 100%;
+    }
+    .navitems {
+      display: none;
+    }
+    
+  
+    .Navbar input:checked ~ .navitems {
+      display: block;
+      -webkit-animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-name: fadeIn;
+      animation-duration: 0.3s;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main {
+      margin: 0;
+    }
+  
+    .marg {
+      padding-bottom: 20px;
+    }
+  
+    .Navbar label {
+      text-align: end;
+  
+      display: inline-block;
+      color: #fcd232;
+      background-color: black;
+      border-radius: 5px;
+      padding: 8px;
+    }
+    .Navbar .main-button {
+      display: none;
+    }
+  
+    .nav-button {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 10px;
+    }
+  
+    .navitems {
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      z-index: 200;
+      left: 0;
+      width: 100%;
+      /* text-align: center; */
+    }
+    .navitems .navlink {
+      /* box-sizing: border-box; */
+      display: inline-block;
+      color: white;
+      text-align: left;
+    }
+  
+    .navitems {
+      display: none;
+    }
+  
+    .Navbar input:checked ~ .navitems,
+    .nav-button {
+      display: block;
+      -webkit-animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-name: fadeIn;
+      animation-duration: 0.3s;
+    }
+  }
+  @media (max-width: 1000px) {
+    .main {
+      margin: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .small-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  @media (max-width: 1620px) {
+    .marg {
+      padding-bottom: 5rem;
+    }
+  }
+  @media (max-width: 980px) {
+    .marg {
+      padding-bottom: 3rem;
+    }
   }

@@ -1,6 +1,7 @@
 import React from 'react';
+import {  Modal } from 'react-bootstrap';
 
-const Modal = ({handleClose, children}) => {
+const ModalClass = ({handleClose, children}) => {
     return (
         <>
         <div className="d-flex modalBootstrap" style={{height: "100vh"}}>
@@ -15,4 +16,4 @@ const Modal = ({handleClose, children}) => {
     );
 };
 
-export default Modal;
+export default ModalClass;
